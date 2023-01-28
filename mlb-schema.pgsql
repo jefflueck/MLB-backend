@@ -1,0 +1,21 @@
+CREATE TABLE users (
+  id SERIAL PRIMARY KEY,
+  username VARCHAR(25) NOT NULL,
+  password TEXT NOT NULL
+);
+
+CREATE TABLE teams (
+  id SERIAL PRIMARY KEY,
+  name TEXT NOT NULL,
+  first  TEXT NOT NULL,
+  second  TEXT NOT NULL,
+  third  TEXT NOT NULL,
+  ss  TEXT NOT NULL,
+  c  TEXT NOT NULL,
+  lf  TEXT NOT NULL,
+  cf  TEXT NOT NULL,
+  rf  TEXT NOT NULL,
+  p  TEXT NOT NULL,
+  user_id INTEGER REFERENCES users(id) ON DELETE CASCADE
+  );
+
