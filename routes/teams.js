@@ -1,6 +1,6 @@
 'use strict';
 
-/** Routes for companies. */
+/** Routes for teams. */
 
 const express = require('express');
 // const { all } = require('../app');
@@ -20,6 +20,7 @@ router.post('/', async function (req, res, next) {
     console.log(req.body);
     const { userId, teamData } = req.body;
     const team = await Team.create(userId, teamData);
+    // * team is an object with the following keys
     /** {team: {
       name: team1,
       first: player 1,
@@ -73,8 +74,9 @@ router.get('/user/:id', async function (req, res, next) {
 
 // patch a team by id
 // * teams/:id
-// future feature
+// future feature, needs front end yet, back end works.
 // TODO show a individual team on the building page and patch it
+// TODO add a button to send patch request to update the team
 
 router.patch('/:teamId', async function (req, res, next) {
   try {
