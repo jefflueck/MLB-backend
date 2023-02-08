@@ -48,14 +48,6 @@
 
 - When a user clicks the **DELETE USER Button** the user and **ALL OF THEIR TEAMS** are permentaly deleted from the Database.
 
-## Future Features
-
----
-
-- A user can update username and password without losing tie to user saved teams.
-
-- A user can see a saved team and edit team information, save again to frachise maintainig team to user association.
-
 ## Tech Stack
 
 ---

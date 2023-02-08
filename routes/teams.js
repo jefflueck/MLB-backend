@@ -49,7 +49,7 @@ router.get('/:id', async function (req, res, next) {
     console.log(req.body);
     console.log(req.params.id);
     const team = await Team.get(req.params.id);
-    console.log(team);
+    // console.log(team);
     return res.json({ team });
   } catch (err) {
     return next(err);
@@ -67,21 +67,6 @@ router.get('/user/:id', async function (req, res, next) {
     const allTeams = await Team.findAll(req.params.id);
     return res.json({ userTeams: allTeams });
     // { userTeams: [{team1}, {team2}, {team3}
-  } catch (err) {
-    return next(err);
-  }
-});
-
-// patch a team by id
-// * teams/:id
-// future feature, needs front end yet, back end works.
-// TODO show a individual team on the building page and patch it
-// TODO add a button to send patch request to update the team
-
-router.patch('/:teamId', async function (req, res, next) {
-  try {
-    const userTeams = await Team.update(req.params.teamId, req.body);
-    return res.json({ userTeams });
   } catch (err) {
     return next(err);
   }
