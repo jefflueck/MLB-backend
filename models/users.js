@@ -97,7 +97,6 @@ class User {
     return user;
   }
 
-  // TODO - add a method to delete user and all associated team
   // delete user and all associated teams
   static async remove(username) {
     let result = await db.query(
@@ -110,7 +109,6 @@ class User {
     const user = result.rows[0];
     return user;
   }
-  // TODO - edit a user info by logged in user and maintain user_id FK for teams
 }
 
 module.exports = User;
